@@ -5,12 +5,9 @@
 ## النشر على GitHub
 
 1. أنشئ مستودعًا جديدًا وفارغًا في GitHub.
-2. افتح Terminal داخل مجلد المشروع وشغّل:
+2. انسخ رابط المستودع، ثم افتح Terminal داخل مجلد المشروع وشغّل:
 
 ```bash
-git init -b main
-git add .
-git commit -m "Prepare Kaizen Fitness website"
 git remote add origin https://github.com/YOUR_USERNAME/kaizen-fitness.git
 git push -u origin main
 ```
@@ -29,3 +26,4 @@ git push -u origin main
 
 - نموذج **Book Free Assessment** مضبوط حاليًا على واتساب الاحتياطي، لكن رابط الـ webhook ما زال فارغًا (`data-webhook-url=""`). أضف عنوان webhook حقيقيًا لتفعيل الإرسال إلى WhatsApp API والبريد وGoogle Sheets.
 - ملفات Aeonik المرفقة تحمل اسم Trial. تأكد من امتلاك ترخيص الاستخدام التجاري قبل نشر الموقع رسميًا.
+# Kaizen
