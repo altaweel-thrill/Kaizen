@@ -4,6 +4,7 @@ const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
 const port = Number(process.env.PORT || 8765);
+const host = process.env.HOST || '127.0.0.1';
 const publicFolders = new Set([
   'admin',
   'fit-and-you.webflow.io', 'assets-global.website-files.com',
@@ -67,4 +68,4 @@ server.on('error', error => {
     : error.message);
   process.exitCode = 1;
 });
-server.listen(port, '127.0.0.1', () => console.log(`Kaizen Fitness: http://localhost:${port}\nPress Ctrl+C to stop. Refresh the browser after editing files.`));
+server.listen(port, host, () => console.log(`Kaizen Fitness listening on ${host}:${port}\nLocal preview: http://localhost:${port}`));

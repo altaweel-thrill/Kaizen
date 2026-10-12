@@ -35,6 +35,7 @@ jobs:
           --exclude='firebase.json' --exclude='firestore.rules' --exclude='docs'
           --exclude='tests'
           --exclude='scripts' --exclude='package.json' --exclude='package-lock.json'
+          --exclude='server.js'
           --exclude='README.md' --exclude='node_modules' --exclude='.env*'
           --exclude='.firebase' --exclude='.firebaserc' --exclude='.secret*'
           --exclude='*.log' --exclude='.DS_Store'

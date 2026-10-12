@@ -9,7 +9,7 @@ const app = initializeApp({
 });
 const auth = getAuth(app);
 if (['kaizen-44bef.web.app', 'kaizen-44bef.firebaseapp.com'].includes(location.hostname)) {
-  document.querySelectorAll('[data-site-link]').forEach(link => { link.href = 'https://altaweel-thrill.github.io/Kaizen/'; });
+  document.querySelectorAll('[data-site-link]').forEach(link => { link.href = 'https://kaizenfit.sa/'; });
 }
 auth.languageCode = 'ar';
 const managerEmail = 'altaweel@thrillagency.net';

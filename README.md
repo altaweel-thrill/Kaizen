@@ -2,6 +2,8 @@
 
 موقع Kaizen Fitness ثابت وجاهز للنشر عبر GitHub Pages.
 
+النشر على DigitalOcean للدومين `https://kaizenfit.sa`: ملف التشغيل `server.js` وأمر `npm start`، مع دعم `PORT`. [إعدادات DigitalOcean](docs/digitalocean.md).
+
 لوحة طلبات التقييم: [فتح لوحة الإدارة](https://kaizen-44bef.web.app/admin/). الدخول مخصص لبريد المدير `altaweel@thrillagency.net` بالإيميل وكلمة المرور، مع تأكيد البريد. [تعليمات الحساب واللوحة](docs/admin-dashboard.md).
 
 ## التشغيل المحلي
