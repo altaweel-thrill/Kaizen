@@ -16,6 +16,8 @@
 
 الدومين الحالي هو `https://kaizenfit.sa`، وأُضيف هو ونسخة `www` إلى أصول Firebase المسموح بها.
 
+رابط المعاينة `https://jellyfish-app-mrvsn.ondigitalocean.app` مسموح أيضًا. لوحة التحكم تُفتح على `/admin/`؛ الخادم يحوّل `/admin` تلقائيًا إلى هذا المسار كي تُحمّل ملفات التنسيق وJavaScript بشكل صحيح.
+
 أضف أصل رابط DigitalOcean أو الدومين النهائي (مثل `https://example.com`، دون مسار أو شرطة مائلة في النهاية) إلى `ALLOWED_ORIGINS` في `functions/.env`، ثم أعد نشر وظائف Firebase. بدون ذلك سترفض Firebase طلبات النموذج من الرابط الجديد.
 
 ```bash

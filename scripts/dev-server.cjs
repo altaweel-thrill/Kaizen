@@ -24,11 +24,16 @@ const mimeTypes = {
 const server = http.createServer((req, res) => {
   const reject = (code) => { res.writeHead(code); res.end(http.STATUS_CODES[code]); };
   if (!['GET', 'HEAD'].includes(req.method)) return reject(405);
-  let pathname;
-  try { pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname); }
+  let pathname, requestUrl;
+  try { requestUrl = new URL(req.url, 'http://localhost'); pathname = decodeURIComponent(requestUrl.pathname); }
   catch { return reject(400); }
   const segments = pathname.split('/').filter(Boolean);
   if (segments.some(segment => segment.startsWith('.') || segment.includes('\\') || segment.includes('\0'))) return reject(403);
+  // Directory pages need a trailing slash so relative CSS/JS URLs resolve inside the directory.
+  if (segments.length === 1 && segments[0] === 'admin' && !pathname.endsWith('/')) {
+    res.writeHead(308, { Location: '/admin/' + requestUrl.search, 'Cache-Control': 'no-store' });
+    return res.end();
+  }
   if (!segments.length) segments.push('index.html');
   if (segments[0] !== 'index.html' && !publicFolders.has(segments[0])) return reject(404);
   if ((pathname.endsWith('/') || (segments.length === 1 && segments[0] === 'admin')) && segments[0] !== 'index.html') segments.push('index.html');
