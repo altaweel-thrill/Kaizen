@@ -460,6 +460,7 @@ window.addEventListener("DOMContentLoaded", () => {
   let lastTrigger = null;
   let isSubmitting = false;
   let submissionSucceeded = false;
+  let pendingRequest = null;
 
   const normaliseSaudiMobile = () => {
     let digits = phoneInput.value.replace(/\D/g, "");
@@ -595,6 +596,7 @@ window.addEventListener("DOMContentLoaded", () => {
     formView.hidden = false;
     successView.hidden = true;
     submissionSucceeded = false;
+    pendingRequest = null;
   };
 
   const openModal = (trigger) => {
@@ -677,6 +679,12 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     const payload = buildLeadPayload();
+    const fingerprint = JSON.stringify({ ...payload, submittedAt: undefined });
+    if (!pendingRequest || pendingRequest.fingerprint !== fingerprint) {
+      pendingRequest = { fingerprint, id: crypto.randomUUID(), submittedAt: payload.submittedAt };
+    }
+    payload.requestId = pendingRequest.id;
+    payload.submittedAt = pendingRequest.submittedAt;
     const webhookUrl = form.dataset.webhookUrl.trim();
     fallback.hidden = true;
     status.textContent = "";
@@ -685,15 +693,20 @@ window.addEventListener("DOMContentLoaded", () => {
     submitButton.classList.add("is-loading");
     submitButton.setAttribute("aria-busy", "true");
     submitLabel.textContent = "Sending securely…";
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 25000);
 
     try {
-      if (!webhookUrl) throw new Error("Assessment webhook is not configured.");
+      if (!webhookUrl) throw new Error('Assessment webhook is not configured.');
       const response = await fetch(webhookUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload), signal: controller.signal,
       });
       if (!response.ok) throw new Error(`Assessment webhook returned ${response.status}.`);
+      const result = await response.json();
+      if (result.ok !== true || result.requestId !== payload.requestId) {
+        throw new Error("The server did not confirm that the request was saved.");
+      }
 
       submissionSucceeded = true;
       formView.hidden = true;
@@ -706,6 +719,7 @@ window.addEventListener("DOMContentLoaded", () => {
       fallbackLink.href = buildWhatsAppUrl(payload);
       fallback.hidden = false;
     } finally {
+      window.clearTimeout(timeout);
       isSubmitting = false;
       submitButton.disabled = false;
       submitButton.classList.remove("is-loading");

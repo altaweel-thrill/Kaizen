@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Kaizen | لوحة الطلبات</title>
+  <link rel="icon" href="../fit-and-you.webflow.io/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <a class="skip" href="#main">انتقل إلى المحتوى</a>
+  <section id="login-view" class="login-view" aria-labelledby="login-title">
+    <div class="login-story">
+      <img class="brand-logo" src="../fit-and-you.webflow.io/images/kaizen-logo.png" alt="Kaizen Fitness">
+      <span class="eyebrow">KAIZEN · PRIVATE PRACTICE</span>
+      <h1>أداء مدروس.<br><span>متابعة دقيقة.</span></h1>
+      <p>مساحة خاصة لإدارة طلبات التقييم ومتابعة رحلة عملائك، من أول تواصل إلى موعد التقييم.</p>
+      <div class="private-label"><span class="status-dot"></span> وصول مخصص للإدارة</div>
+    </div>
+    <div class="login-card">
+      <span class="eyebrow">لوحة التحكم</span>
+      <h2 id="login-title">مرحبًا بعودتك</h2>
+      <p class="muted">سجّل الدخول بحساب المدير لعرض الطلبات.</p>
+      <form id="login-form">
+        <label for="email">البريد الإلكتروني</label>
+        <input id="email" type="email" dir="ltr" autocomplete="username" required placeholder="name@example.com">
+        <label for="password">كلمة المرور</label>
+        <div class="password-wrap"><input id="password" type="password" dir="ltr" autocomplete="current-password" required><button id="toggle-password" type="button" aria-label="إظهار كلمة المرور">إظهار</button></div>
+        <button class="button primary wide" id="login-button" type="submit">تسجيل الدخول</button>
+      </form>
+      <div class="login-links"><button class="text-button" id="reset-password" type="button">نسيت كلمة المرور؟</button></div>
+      <p class="notice" id="login-status" role="status" aria-live="polite"></p>
+      <a class="back-link" data-site-link href="../index.html">العودة إلى موقع Kaizen ←</a>
+    </div>
+  </section>
+
+  <section id="verification-view" class="verification-view" hidden>
+    <div class="login-card">
+      <span class="eyebrow">حماية حسابك</span><h1>تأكيد البريد الإلكتروني</h1>
+      <p>افتح رابط التأكيد في بريدك، ثم اضغط «تحقّق من التفعيل». لا يمكن عرض الطلبات قبل تأكيد حساب المدير.</p>
+      <p class="account-email" id="verify-email" dir="ltr"></p>
+      <button class="button primary wide" id="check-verification" type="button">تحقّق من التفعيل</button>
+      <button class="text-button" id="resend-verification" type="button">إرسال رابط التأكيد</button>
+      <button class="text-button" id="verification-logout" type="button">تسجيل الخروج</button>
+      <p class="notice" id="verification-status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <div id="dashboard-view" class="dashboard" hidden>
+    <aside class="sidebar">
+      <img class="brand-logo" src="../fit-and-you.webflow.io/images/kaizen-logo.png" alt="Kaizen Fitness">
+      <span class="eyebrow">إدارة العلاقات</span>
+      <a class="nav-item active" href="#main"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>طلبات التقييم<span id="nav-count">0</span></a>
+      <a class="nav-item" data-site-link href="../index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg>زيارة الموقع</a>
+      <div class="sidebar-footer"><span class="status-dot"></span> لوحة إدارة خاصة <small>KAIZEN FITNESS</small></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><span>الإدارة <span class="separator">/</span> طلبات التقييم</span><div class="account"><span id="user-email" dir="ltr"></span><button class="text-button" id="logout-button" type="button">خروج</button></div></header>
+      <main id="main">
+        <div class="page-heading"><div><span class="eyebrow">PERFORMANCE & HEALTH ARCHITECTURE</span><h1>طلبات التقييم</h1><p class="muted">كل طلب هو بداية رحلة جديدة. تابع التفاصيل والخطوة التالية في مكان واحد.</p></div><button class="button secondary" id="refresh-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5M6 7a7 7 0 0 1 12-2l2 2M4 17l2 2a7 7 0 0 0 12-2"/></svg>تحديث الطلبات</button></div>
+        <div class="stats" aria-label="إحصاءات الطلبات">
+          <article class="stat"><span>إجمالي الطلبات</span><strong id="stat-total">—</strong><small>جميع طلبات التقييم</small></article>
+          <article class="stat accent"><span>طلبات جديدة</span><strong id="stat-new">—</strong><small>بانتظار أول تواصل</small></article>
+          <article class="stat"><span>تم التواصل</span><strong id="stat-contacted">—</strong><small>تجهيز الخطوة التالية</small></article>
+          <article class="stat"><span>تم تحديد موعد</span><strong id="stat-scheduled">—</strong><small>جاهزة للتقييم</small></article>
+        </div>
+        <section class="requests-panel" aria-labelledby="requests-title">
+          <div class="panel-heading"><h2 id="requests-title">سجل الطلبات</h2><span class="live-note"><span class="status-dot"></span><span id="last-updated">بانتظار التحديث</span></span></div>
+          <div class="filters"><div class="search-field"><label for="search">البحث في الطلبات المحمّلة</label><input id="search" type="search" placeholder="ابحث بالاسم أو رقم واتساب…" autocomplete="off"></div><div><label for="status-filter">حالة الطلب</label><select id="status-filter"><option value="all">كل الحالات</option><option value="new">جديد</option><option value="contacted">تم التواصل</option><option value="scheduled">تم تحديد موعد</option><option value="completed">مكتمل</option><option value="archived">مؤرشف</option></select></div></div>
+          <p class="notice panel-notice" id="dashboard-status" role="status" aria-live="polite"></p>
+          <div class="table-wrap"><table><thead><tr><th scope="col">العميل</th><th scope="col">هدف التقييم</th><th scope="col">تاريخ الطلب</th><th scope="col">الحالة</th><th scope="col">التفاصيل</th></tr></thead><tbody id="request-rows"></tbody></table></div>
+          <div class="empty-state" id="empty-state" hidden><span class="eyebrow">مساحة لبدايات جديدة</span><h3>لا توجد طلبات لعرضها</h3><p>ستظهر الطلبات هنا بعد إرسال نموذج التقييم، أو جرّب تغيير البحث والحالة.</p></div>
+          <footer class="panel-footer"><span id="result-count">0 طلب</span><button id="load-more" class="button secondary" type="button" hidden>تحميل المزيد</button><span class="muted">تحديث تلقائي كل دقيقة</span></footer>
+        </section>
+      </main>
+      <footer class="page-footer">KAIZEN FITNESS <span>إدارة خاصة · بيانات العملاء محمية</span></footer>
+    </div>
+  </div>
+
+  <dialog id="detail-modal" aria-labelledby="detail-title"><div class="detail-content"><header class="detail-heading"><div><span class="eyebrow">تفاصيل التقييم الخاص</span><h2 id="detail-title"></h2></div><button class="close-button" id="close-detail" type="button" aria-label="إغلاق تفاصيل الطلب">×</button></header><div id="detail-fields" class="detail-fields"></div><form id="status-form"><label for="detail-status">تحديث حالة الطلب</label><div class="status-controls"><select id="detail-status"><option value="new">جديد</option><option value="contacted">تم التواصل</option><option value="scheduled">تم تحديد موعد</option><option value="completed">مكتمل</option><option value="archived">مؤرشف</option></select><button class="button primary" id="save-status" type="submit">حفظ الحالة</button></div><p class="notice" id="detail-notice" role="status"></p></form><a class="button whatsapp" id="detail-whatsapp" target="_blank" rel="noopener noreferrer">التواصل عبر واتساب ↗</a></div></dialog>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

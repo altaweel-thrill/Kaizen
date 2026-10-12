@@ -2,3 +2,9 @@
 **/.DS_Store
 *.log
 fit-and-you.webflow.io/_downloads.html
+node_modules/
+.env
+.env.*
+!.env.example
+.secret.local
+.firebase/
