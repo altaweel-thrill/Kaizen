@@ -1,0 +1,167 @@
+[
+  {
+    "slug": "active-plus",
+    "name": "ACTIVE PLUS",
+    "category": "Training Facility Partner",
+    "description": "Supporting our personal training experience through access to professional training facilities.",
+    "logo": "images/partners/active-plus/logo.jpg",
+    "cover": {
+      "src": "images/partners/active-plus/cardio.jpg",
+      "alt": "ACTIVE PLUS cardio equipment beside floor-to-ceiling windows"
+    },
+    "gallery": [
+      {
+        "src": "images/partners/active-plus/cardio.jpg",
+        "alt": "ACTIVE PLUS treadmill area overlooking the waterfront",
+        "thumbnail": "images/partners/active-plus/cardio-thumb.jpg"
+      },
+      {
+        "src": "images/partners/active-plus/cycling.jpg",
+        "alt": "ACTIVE PLUS exercise bikes and cross-trainers",
+        "thumbnail": "images/partners/active-plus/cycling-thumb.jpg"
+      },
+      {
+        "src": "images/partners/active-plus/studio.jpg",
+        "alt": "ACTIVE PLUS studio with training mats and equipment",
+        "thumbnail": "images/partners/active-plus/studio-thumb.jpg"
+      },
+      {
+        "src": "images/partners/active-plus/lockers.jpg",
+        "alt": "ACTIVE PLUS changing area and wooden lockers",
+        "thumbnail": "images/partners/active-plus/lockers-thumb.jpg"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4231.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4231-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 5"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4233.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4233-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 6"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4241.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4241-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 7"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4245.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4245-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 8"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4247.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4247-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 9"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4255.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4255-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 10"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4261.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4261-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 11"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4265.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4265-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 12"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4279.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4279-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 13"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4281.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4281-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 14"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4283.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4283-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 15"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4289.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4289-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 16"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4291.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4291-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 17"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4293.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4293-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 18"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4295.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4295-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 19"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4299.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4299-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 20"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4304.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4304-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 21"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4306.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4306-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 22"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4310.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4310-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 23"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4314.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4314-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 24"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4316.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4316-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 25"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4318.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4318-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 26"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4326.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4326-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 27"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4328.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4328-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 28"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4354.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4354-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 29"
+      },
+      {
+        "src": "images/partners/active-plus/dsc-4358.jpg",
+        "thumbnail": "images/partners/active-plus/dsc-4358-thumb.jpg",
+        "alt": "ACTIVE PLUS facility — photo 30"
+      }
+    ],
+    "address": "Al Khobar\nKingdom of Saudi Arabia",
+    "mapsUrl": "https://share.google/S8lBI5P10Db94UOTj"
+  }
+]
